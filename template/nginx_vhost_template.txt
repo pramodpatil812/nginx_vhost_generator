@@ -1,0 +1,12 @@
+server {
+    listen       {{port}};
+    server_name  {{domain}};
+  
+    location / {
+        root   {{root}};
+        index  index.html index.htm;
+    }
+
+    access_log /var/log/nginx/{{domain}}_access.log;
+    error_log /var/log/nginx/{{domain}}_error.log;
+}
